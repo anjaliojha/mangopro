@@ -1,9 +1,7 @@
 class Ground{
     constructor(x,y,width,height){
         var options = {
-            isStatic: true,
-            restitution: 1
-            
+            isStatic: true
         }
         this.width = width;
         this.height = height;
@@ -12,12 +10,10 @@ class Ground{
     }
     display(){
         var groundpos = this.body.position;
-        push();
-        translate(groundpos.x,groundpos.y);
-        stroke("black");
+        
         fill("brown");
         rectMode(CENTER);
         rect(groundpos.x,groundpos.y,this.width,this.height);
-        pop();
+        
     }
 }
